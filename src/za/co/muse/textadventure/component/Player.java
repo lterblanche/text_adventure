@@ -10,7 +10,6 @@ public class Player {
 
         System.out.println("Constructing player ...");
         System.out.println(("Player done."));
-
     }
 
     /**
