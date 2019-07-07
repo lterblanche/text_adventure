@@ -53,7 +53,6 @@ public class Player {
         return posRow;
     }
 
-
     int getPosCol() {
         return posCol;
     }
