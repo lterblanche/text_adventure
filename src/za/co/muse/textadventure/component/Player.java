@@ -15,6 +15,7 @@ public class Player {
     /**
      * Moves player to new position
      */
+
     void move(EnumDirection direction) {
         GameController controller = GameController.getInstance();
         Grid gameGrid = controller.getGrid();

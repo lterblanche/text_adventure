@@ -1,9 +1,16 @@
 package za.co.muse.textadventure.component;
 
+import java.util.ArrayList;
+import java.util.List;
+import za.co.muse.textadventure.component.Item;
+
 public class Space {
     private int row_position = 0;
     private int col_position = 0;
     private String name;
+    private ArrayList<Item> items = new ArrayList<>();
+
+
 
     public Space() {
         this(1, 1, "Unknown");
@@ -14,6 +21,8 @@ public class Space {
         this.setCol_position(col_position);
         this.name = name;
     }
+
+
 
 
     public int getRow_position() {
@@ -38,5 +47,22 @@ public class Space {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void addItem(Item aItem){
+        boolean isValid = true;
+
+        int aItemRow = aItem.getPositionRow();
+        int aItemCol = aItem.getPositionCol();
+
+        //Check to see if the space is valid
+        if (isValid = true){
+            items.add(aItem);
+
+        }
+
+        if (isValid){
+
+        }
     }
 }

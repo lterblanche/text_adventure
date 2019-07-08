@@ -17,24 +17,21 @@ public class Main {
         gameController.getGrid().setNbRows(4);
 
         Space a1 = new Space(1, 2, "Bedroom");
+        //add items to space a2
         Space a2 = new Space(1, 3, "Hallway:");
-        Space a3 = new Space(1, 4, "Outside");
-
+        //add items to space a3
+        Space a3 = new Space(1, 4, "Bedroom2");
         Space b1 = new Space(2, 2, "Hallway");
+        //add items to b1
         Space b2 = new Space(2, 3, "Hallway");
         Space b3 = new Space(2, 4, "Hallway");
-
         Space c1 = new Space(3, 2, "Store room");
         Space c2 = new Space(3, 3, "Hallway");
         Space c3 = new Space(3, 4, "Study");
-
         Space d1 = new Space(4, 2, "Hallway");
         Space d2 = new Space(4, 3, "Hallway");
         Space d3 = new Space(4, 4, "Hallway");
-
         Space e = new Space(4, 1, "Vault");
-
-
         Player player = GameController.getInstance().getPlayer();
         player.setCurrentPos(1, 2);
 

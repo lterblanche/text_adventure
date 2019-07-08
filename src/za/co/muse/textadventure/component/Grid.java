@@ -11,6 +11,8 @@ public class Grid {
     private int nbCols;
     private List<Space> blocks = new ArrayList<>();
 
+
+
     public Grid(int nbRows, int nbCols) {
         System.out.println("Constructing " + nbRows + " x " + nbCols + " grid...");
         this.setNbRows(nbRows);
@@ -38,6 +40,8 @@ public class Grid {
             System.out.println("Can't place a Space here");
         }
     }
+
+
 
     /**
      * Returns the space in this position
