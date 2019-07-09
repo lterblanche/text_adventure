@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4f0dcd8-d49b-41d0-9d71-04895fa2e0ec" name="Default Changelist" comment="create A Class for items">
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4f0dcd8-d49b-41d0-9d71-04895fa2e0ec" name="Default Changelist" comment="create A Class for items" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
