@@ -60,9 +60,5 @@ public class Space {
             items.add(aItem);
 
         }
-
-        if (isValid){
-
-        }
     }
 }

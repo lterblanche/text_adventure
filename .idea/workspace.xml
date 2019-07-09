@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4f0dcd8-d49b-41d0-9d71-04895fa2e0ec" name="Default Changelist" comment="create A Class for items">
-      <change afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/game_design" beforeDir="false" afterPath="$PROJECT_DIR$/UML/game_design" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Player$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+            <state relative-caret-position="227">
+              <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#753#754#0" expanded="true" />
@@ -287,14 +278,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1296" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4892562" visible="true" weight="0.2648" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4892562" visible="true" weight="0.2648" />
       <window_info id="Structure" order="6" sideWeight="0.5107438" side_tool="true" weight="0.2648" />
       <window_info id="DB Browser" order="7" />
       <window_info anchor="bottom" id="Terminal" order="0" />
@@ -302,8 +292,8 @@
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3294893" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" visible="true" weight="0.3289256" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.3107438" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3289256" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3107438" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39868203" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -430,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+        <state relative-caret-position="227">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#753#754#0" expanded="true" />
