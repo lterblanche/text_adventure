@@ -67,18 +67,46 @@ public class Main {
 
 
         gameController.getGrid().addSpace(a1);
+        gameController.getSpace().addItem(a1Item1);
+        gameController.getSpace().addItem(a1Item2);
+        gameController.getSpace().addItem(a1Item3);
+
         gameController.getGrid().addSpace(a2);
+
         gameController.getGrid().addSpace(a3);
+        gameController.getSpace().addItem(a3Item1);
+        gameController.getSpace().addItem(a3Item2);
+        gameController.getSpace().addItem(a3Item3);
+
         gameController.getGrid().addSpace(b1);
+        gameController.getSpace().addItem(b1Item1);
         gameController.getGrid().addSpace(b2);
         gameController.getGrid().addSpace(b3);
+
         gameController.getGrid().addSpace(c1);
+        gameController.getSpace().addItem(c1Item1);
+        gameController.getSpace().addItem(c1Item2);
+        gameController.getSpace().addItem(c1Item3);
+
         gameController.getGrid().addSpace(c2);
         gameController.getGrid().addSpace(c3);
+        gameController.getSpace().addItem(c3Item1);
+        gameController.getSpace().addItem(c3Item2);
+        gameController.getSpace().addItem(c3Item3);
+        gameController.getSpace().addItem(c3Item4);
+
         gameController.getGrid().addSpace(d1);
+        gameController.getSpace().addItem(d1Item1);
+        gameController.getSpace().addItem(d1Item2);
         gameController.getGrid().addSpace(d2);
+        gameController.getSpace().addItem(d2Item1);
+
         gameController.getGrid().addSpace(d3);
+        gameController.getSpace().addItem(d3Item1);
+        gameController.getSpace().addItem(d3Item2);
+        gameController.getSpace().addItem(d3Item3);
         gameController.getGrid().addSpace(e);
+        gameController.getSpace().addItem(eItem);
 
 
         while (!gameController.doAbortGame()) {
