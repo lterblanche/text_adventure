@@ -12,6 +12,7 @@ public class GameController {
     private Scanner inputScanner;
     private Grid grid;
     private Player player;
+    private Space space;
     private boolean abortGame = false;
 
 
@@ -23,6 +24,7 @@ public class GameController {
         System.out.println("Constructing game controller...");
         grid = new Grid(4, 4);
         player = new Player();
+        space = new Space();
         System.out.println(getPlayer());
         inputScanner = new Scanner(System.in);
         System.out.println("Game controller done.");
@@ -100,10 +102,15 @@ public class GameController {
         // LOOK
         if (userInput.toLowerCase().contains("look")) {
             self.look();
+            space.listItems();
+
         }
         // END
         if (userInput.toLowerCase().contains("end")) {
             abortGame = true;
+        }
+        if (userInput.toLowerCase().contains("Inventory")){
+            player.listInventory();
         }
     }
     ///

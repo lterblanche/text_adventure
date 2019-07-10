@@ -2,9 +2,12 @@ package za.co.muse.textadventure.component;
 
 import za.co.muse.textadventure.common.EnumDirection;
 
+import java.util.ArrayList;
+
 public class Player {
     private int posRow;
     private int posCol;
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public Player() {
 
@@ -63,6 +66,23 @@ public class Player {
             posRow = row;
         } else {
             System.out.println("Invalid player position!");
+        }
+    }
+    //add item to the inventory
+    public  void addInventory(Item aItem, boolean canLift){
+        if (canLift == true){
+            inventory.add(aItem);
+            System.out.println("Item added to inventory");
+        }
+        else{
+            System.out.println("Sorry I can Lift that Object");
+
+        }
+    }
+    //list all items currenty in the inventory
+    public void listInventory(){
+        for (int i=0;i<inventory.size();i++){
+            System.out.println(inventory.get(i));
         }
     }
 
