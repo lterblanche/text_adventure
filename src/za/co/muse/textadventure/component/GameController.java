@@ -117,6 +117,10 @@ public class GameController {
         if (userInput.toLowerCase().contains("Inventory")){
             getPlayer().listInventory();
         }
+        if (userInput.toLowerCase().contains("Pickup")){
+            System.out.println("Which item do you want to add to your inventory?");
+        }
+
     }
 
     /**

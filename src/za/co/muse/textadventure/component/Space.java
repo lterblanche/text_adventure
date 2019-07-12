@@ -50,17 +50,10 @@ public class Space {
     }
 
     public void addItem(Item aItem){
-        boolean isValid = true;
-
-        int aItemRow = aItem.getPositionRow();
-        int aItemCol = aItem.getPositionCol();
-
         //Check to see if the space is valid
-        if (isValid = true){
             items.add(aItem);
 
         }
-    }
 //list all availible items in the space
     public void listItems(){
 

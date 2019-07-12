@@ -4,11 +4,13 @@ public class Item {
     private int positionRow;
     private int positionCol;
     private String name;
+    private boolean canTransferOwnership;
 
-    public Item(String name,int positionRow, int positionCol){
+    public Item(String name,int positionRow, int positionCol,boolean canTransferOwnership){
         this.setName(name);
         this.setPositionRow(positionRow);
         this.setPositionCol(positionCol);
+        this.setCanTransferOwnership(canTransferOwnership);
 
     }
 
@@ -35,5 +37,13 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isCanTransferOwnership() {
+        return canTransferOwnership;
+    }
+
+    public void setCanTransferOwnership(boolean canTransferOwnership) {
+        this.canTransferOwnership = canTransferOwnership;
     }
 }
