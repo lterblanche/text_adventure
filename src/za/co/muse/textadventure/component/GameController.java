@@ -10,7 +10,6 @@ public class GameController {
     private Grid grid;
     private Player player;
     private Space space;
-    private Item item;
     private boolean abortGame = false;
 
 

@@ -8,7 +8,6 @@ public class Space {
     private int row_position = 0;
     private int col_position = 0;
     private String name;
-    private Item object;
     private ArrayList<Item> items = new ArrayList<>();
 
 
@@ -60,9 +59,11 @@ public class Space {
     public void listItems(){
 
         for (int i=0;i<items.size();i++){
-            if (object.getPositionRow()== row_position&& object.getPositionCol() == col_position) {
+
+            if (items.get(i).getPositionRow() == row_position && items.get(i).getPositionCol() == col_position){
                 System.out.println(items.get(i).getName());
             }
+
         }
     }
 }
