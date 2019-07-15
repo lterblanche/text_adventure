@@ -10,6 +10,7 @@ public class GameController {
     private Grid grid;
     private Player player;
     private Space space;
+    private Item item;
     private boolean abortGame = false;
 
 
@@ -98,7 +99,7 @@ public class GameController {
     }
 
     public void getUserInput() {
-        System.out.println("What do you want to do? (use `move ...`, `look`, or `end`:");
+        System.out.println("What do you want to do? (use `move ...`, `look`, `Inventory`, `Pickup` or `end`:");
         String userInput = getInputScanner().nextLine();
         // MOVE
         if (userInput.toLowerCase().contains("move ")) {
@@ -116,6 +117,7 @@ public class GameController {
         }
         if (userInput.toLowerCase().contains("Inventory")){
             getPlayer().listInventory();
+
         }
         if (userInput.toLowerCase().contains("Pickup")){
             System.out.println("Which item do you want to add to your inventory?");
@@ -161,6 +163,11 @@ public class GameController {
     ///
     ///
     ///
-
+    //add item into inventory
+    public void addItem(Item inven){
+        if (inven.isCanTransferOwnership() == true){
+            player.addInventory(inven);
+        }
+    }
 
 }

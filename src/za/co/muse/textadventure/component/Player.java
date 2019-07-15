@@ -24,7 +24,7 @@ public class Player {
         Grid gameGrid = controller.getGrid();
 
         // First check to see if the move is doable
-        if (gameGrid.canMoveInDirection(direction, posRow, posCol)) {
+        if (gameGrid.canMoveInDirection(direction, getPosRow(), getPosCol())) {
             switch (direction) {
                 case NORTH:
                     setCurrentPos(getPosRow() - 1, getPosCol());
@@ -49,7 +49,7 @@ public class Player {
     }
 
     public String toString() {
-        return ("My current position is " + posRow + ";" + posCol);
+        return ("My current position is " + getPosRow() + ";" + getPosCol());
     }
 
     int getPosRow() {
@@ -62,28 +62,39 @@ public class Player {
 
     public void setCurrentPos(int row, int col){
         if (GameController.getInstance().getGrid().isPositionInGrid(row, col)) {
-            posCol = col;
-            posRow = row;
+            setPosCol(col);
+            setPosRow(row);
         } else {
             System.out.println("Invalid player position!");
         }
     }
     //add item to the inventory
-    public  void addInventory(Item aItem, boolean canLift){
-        if (canLift == true){
-            inventory.add(aItem);
-            System.out.println("Item added to inventory");
-        }
-        else{
-            System.out.println("Sorry I can Lift that Object");
+    public  void addInventory(Item aItem){
 
-        }
+            getInventory().add(aItem);
+            System.out.println("Item added to inventory");
+
     }
     //list all items currenty in the inventory
     public void listInventory(){
-        for (int i=0;i<inventory.size();i++){
-            System.out.println(inventory.get(i));
+        for (int i = 0; i< getInventory().size(); i++){
+            System.out.println(getInventory().get(i));
         }
     }
 
+    public void setPosRow(int posRow) {
+        this.posRow = posRow;
+    }
+
+    public void setPosCol(int posCol) {
+        this.posCol = posCol;
+    }
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
 }
