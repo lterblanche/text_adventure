@@ -9,9 +9,7 @@ public class GameController {
     private Scanner inputScanner;
     private Grid grid;
     private Player player;
-    private Space space;
     private boolean abortGame = false;
-
 
 
     /**
@@ -21,7 +19,6 @@ public class GameController {
         System.out.println("Constructing game controller...");
         setGrid(new Grid(4, 4));
         setPlayer(new Player());
-        setSpace(new Space());
         System.out.println(getPlayer());
         setInputScanner(new Scanner(System.in));
         System.out.println("Game controller done.");
@@ -73,25 +70,22 @@ public class GameController {
         }
     }
 
-    /**
-     * Shows the Player where he/she is, what is visible and what can be interacted with.
-     */
-    private void look() {
-        // What room are we in?
-        Space userSpace = getGrid().getSpace(getPlayer().getPosRow(), getPlayer().getPosCol());
-        System.out.println("You are now in the " + userSpace.getName() + ".");
-        System.out.println("Your position is [" + getPlayer().getPosRow() + "; " + getPlayer().getPosCol() + "]");
-    }
-
 
     public Grid getGrid() {
         return grid;
+    }
+
+    public void setGrid(Grid grid) {
+        this.grid = grid;
     }
 
     public Player getPlayer() {
         return player;
     }
 
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 
     public boolean doAbortGame() {
         return isAbortGame();
@@ -104,22 +98,31 @@ public class GameController {
         if (userInput.toLowerCase().contains("move ")) {
             getSelf().move(userInput.substring(5));
         }
+
         // LOOK
         if (userInput.toLowerCase().contains("look")) {
-            getSelf().look();
-            getSpace().listItems();
-
+            // Look where we are
+            System.out.println(getSurroundings());
+            // What's in the room
+            System.out.println(getSpaceWherePlayerIs().listInventory());
+            // What do I have on me?
+            System.out.println(getPlayer().listInventory());
         }
         // END
         if (userInput.toLowerCase().contains("end")) {
             setAbortGame(true);
         }
-        if (userInput.toLowerCase().contains("Inventory")){
+        // LIST INVENTORY
+        if (userInput.toLowerCase().contains("inventory")) {
             getPlayer().listInventory();
-
         }
-        if (userInput.toLowerCase().contains("Pickup")){
-            System.out.println("Which item do you want to add to your inventory?");
+        // INTERACT
+        if (userInput.toLowerCase().contains("pickup")) {
+            if (performPickup(userInput.substring(6))) {
+                System.out.println("Okay");
+            } else {
+                System.out.println("Can't do that");
+            }
         }
 
     }
@@ -135,22 +138,6 @@ public class GameController {
         this.inputScanner = inputScanner;
     }
 
-    public void setGrid(Grid grid) {
-        this.grid = grid;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public Space getSpace() {
-        return space;
-    }
-
-    public void setSpace(Space space) {
-        this.space = space;
-    }
-
     public boolean isAbortGame() {
         return abortGame;
     }
@@ -158,15 +145,54 @@ public class GameController {
     public void setAbortGame(boolean abortGame) {
         this.abortGame = abortGame;
     }
-    ///
-    ///
-    ///
-    ///
-    //add item into inventory
-    public void addItem(Item inven){
-        if (inven.isCanTransferOwnership() == true){
-            player.addInventory(inven);
+
+    /**
+     * Returns a String, showing the Player where he/she is,
+     * what is visible and what can be interacted with.
+     */
+    private String getSurroundings() {
+        // What room are we in?
+        StringBuilder stringBuilder = new StringBuilder();
+        Space userSpace = getGrid().getSpace(getPlayer().getPosRow(), getPlayer().getPosCol());
+        stringBuilder.append("You are now in the " + userSpace.getName() + ".");
+        stringBuilder.append("Your position is [" + getPlayer().getPosRow() + "; " + getPlayer().getPosCol() + "]");
+
+        return stringBuilder.toString();
+    }
+
+    /**
+     * Easy way to get the space where the player is now.
+     *
+     * @return
+     */
+    public Space getSpaceWherePlayerIs() {
+        return getGrid().getSpace(getPlayer().getPosRow(), getPlayer().getPosCol());
+    }
+
+    /**
+     * Picks up item
+     *
+     * @param itemToPickUp
+     * @return
+     */
+    private boolean performPickup(String itemToPickUp) {
+        // Find item in room with this name (case-insensitive)
+        for (Item item : getSpaceWherePlayerIs().getInventory()) {
+            String itemName = item.getName().trim();
+            if (itemToPickUp.trim().compareToIgnoreCase(itemName) == 0) {
+                // Stem 1, can we interact with this item?
+                if (item.isTransferrable()) {
+                    // Step 1, remove the item from the room
+                    getSpaceWherePlayerIs().removeItemFromInventory(item);
+                    // Step 2, add the item to the player
+                    getPlayer().addItemToInventory(item);
+                    // Done, we're happy
+                    return true;
+                }
+            }
         }
+        // We probably didn't get the item.
+        return false;
     }
 
 }

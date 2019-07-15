@@ -42,7 +42,7 @@ public class Player {
                     setCurrentPos(getPosRow(), getPosCol() - 1);
                     break;
             }
-            System.out.println("Player moved to "+ getPosRow()+";"+ getPosCol());
+            System.out.println("Player moved to " + getPosRow() + ";" + getPosCol());
         } else {
             System.out.println("Can't go there idiot!");
         }
@@ -56,11 +56,19 @@ public class Player {
         return posRow;
     }
 
+    public void setPosRow(int posRow) {
+        this.posRow = posRow;
+    }
+
     int getPosCol() {
         return posCol;
     }
 
-    public void setCurrentPos(int row, int col){
+    public void setPosCol(int posCol) {
+        this.posCol = posCol;
+    }
+
+    public void setCurrentPos(int row, int col) {
         if (GameController.getInstance().getGrid().isPositionInGrid(row, col)) {
             setPosCol(col);
             setPosRow(row);
@@ -68,33 +76,61 @@ public class Player {
             System.out.println("Invalid player position!");
         }
     }
-    //add item to the inventory
-    public  void addInventory(Item aItem){
 
-            getInventory().add(aItem);
-            System.out.println("Item added to inventory");
 
+    /**
+     * Adds given item to the Player's Inventory
+     *
+     * @param item Object to interact with
+     * @return true if successful
+     */
+    public boolean addItemToInventory(Item item) {
+        return this.inventory.add(item);
     }
-    //list all items currenty in the inventory
-    public void listInventory(){
-        for (int i = 0; i< getInventory().size(); i++){
-            System.out.println(getInventory().get(i));
+
+    /**
+     * Removes given item from Player's Inventory
+     *
+     * @param item Object to interact with
+     * @return true if successful
+     */
+    public boolean removeItemFromInventory(Item item) {
+        return this.inventory.remove(item);
+    }
+
+    /**
+     * Returns true if this item exists in the inventory
+     *
+     * @param item Object to interact with
+     * @return true if exists
+     */
+    public boolean hasItem(Item item) {
+        return inventory.contains(item);
+    }
+
+    /**
+     * Returns a text display of what the Player has on his person
+     * @return String of items
+     */
+    public String listInventory() {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (inventory.size() > 0) {
+            stringBuilder.append("I have:");
+            for (Item item : inventory) {
+                stringBuilder.append("\n\t" + item.getName());
+            }
+        } else {
+            stringBuilder.append("Sorry, my pockets are empty");
         }
+        return stringBuilder.toString();
     }
 
-    public void setPosRow(int posRow) {
-        this.posRow = posRow;
+    /**
+     * Returns list of items on the player
+     * @return
+     */
+    public ArrayList<Item> getInventory(){
+        return this.inventory;
     }
 
-    public void setPosCol(int posCol) {
-        this.posCol = posCol;
-    }
-
-    public ArrayList<Item> getInventory() {
-        return inventory;
-    }
-
-    public void setInventory(ArrayList<Item> inventory) {
-        this.inventory = inventory;
-    }
 }
