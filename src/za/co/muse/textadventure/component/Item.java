@@ -1,8 +1,8 @@
 package za.co.muse.textadventure.component;
 
 public class Item {
-    // private int positionRow;
-    // private int positionCol;
+    private int positionRow;
+     private int positionCol;
     private String name;
     private boolean transferrable;
 
