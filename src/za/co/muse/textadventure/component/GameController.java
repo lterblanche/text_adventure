@@ -124,6 +124,14 @@ public class GameController {
                 System.out.println("Can't do that");
             }
         }
+        if (userInput.toLowerCase().contains("drop")) {
+            if (preformDrop(userInput.substring(6))) {
+                System.out.println("Item Dropped");
+
+            } else {
+                System.out.println("Could not Drop item here");
+            }
+        }
 
     }
 
@@ -194,5 +202,24 @@ public class GameController {
         // We probably didn't get the item.
         return false;
     }
+
+    private boolean preformDrop(String itemToDrop) {
+        //Drop item in room the player is currently in
+        for (Item item : getPlayer().getInventory()) {
+            String itemName = item.getName().trim();
+            if (itemToDrop.trim().compareToIgnoreCase(itemName) == 0) {
+                //Remove Item from player inventory
+                    getPlayer().removeItemFromInventory(item);
+                //Place item in room
+                    getSpaceWherePlayerIs().addItemToInventory(item);
+                    //Done we're happy
+                    return true;
+                }
+            }
+        return true;
+        }
+
+
+
 
 }
