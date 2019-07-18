@@ -125,7 +125,7 @@ public class GameController {
             }
         }
         if (userInput.toLowerCase().contains("drop")) {
-            if (preformDrop(userInput.substring(6))) {
+            if (performDrop(userInput.substring(4))) {
                 System.out.println("Item Dropped");
 
             } else {
@@ -203,7 +203,7 @@ public class GameController {
         return false;
     }
 
-    private boolean preformDrop(String itemToDrop) {
+    private boolean performDrop(String itemToDrop) {
         //Drop item in room the player is currently in
         for (Item item : getPlayer().getInventory()) {
             String itemName = item.getName().trim();

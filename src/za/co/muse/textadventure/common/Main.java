@@ -43,12 +43,15 @@ public class Main {
         bedroomTwo.addItemToInventory(new Item("Closet", 1, 4, false));
 
         // .. do the rest here
+        Space Hallway2One = new Space(2,2,"HaalWay");
+        //add items
+        Hallway2One.addItemToInventory(new Item("Painting",2,2,false));
 
-//        Space b1 = new Space(2, 2, "Hallway");
-//        Item b1Item1 = new Item("Painting", 2, 2, false);
-//        //add items to b1
-//        Space b2 = new Space(2, 3, "Hallway");
-//        Space b3 = new Space(2, 4, "Hallway");
+        Space Hallway2Two = new Space(2,2,"Hallway");
+        Space Hallway2Tree = new Space(2,4,"Hallway");
+
+
+//
 //
 //        Space c1 = new Space(3, 2, "Store room");
 //        Item c1Item1 = new Item("Ladder", 3, 2, true);
@@ -84,6 +87,10 @@ public class Main {
         gameController.getGrid().addSpace(bedroomOne);
         gameController.getGrid().addSpace(bedroomTwo);
         gameController.getGrid().addSpace(hallwayOne);
+
+        gameController.getGrid().addSpace(Hallway2One);
+        gameController.getGrid().addSpace(Hallway2Two);
+        gameController.getGrid().addSpace(Hallway2Tree);
 
         // .. do the rest here
 

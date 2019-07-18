@@ -87,6 +87,9 @@ public class Grid {
         int newCol = currentCol;
 
         // Update new position according to direction
+        if(newRow ==1 && newCol == 2){
+
+        }
         switch (direction) {
 
             case NORTH:
@@ -107,9 +110,26 @@ public class Grid {
         }
 
         // Step through blocks.  If one exists in new position, returns true
+
         for (Space block : getBlocks()) {
             if (block.getCol_position() == newCol && block.getRow_position() == newRow) {
                 return true;
+            }
+        }
+        if (currentRow == 1 && currentCol == 2){
+            if (newRow != 1){
+                return false;
+            }
+        }
+        if (currentRow == 1 && currentCol == 4){
+            if (newRow != 1){
+                return false;
+            }
+        }
+
+        if (currentRow == 2 && currentCol ==2){
+            if (newRow != 2){
+                return false;
             }
         }
 
