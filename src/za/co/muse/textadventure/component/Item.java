@@ -1,12 +1,10 @@
 package za.co.muse.textadventure.component;
 
 public class Item {
-    private int positionRow;
-     private int positionCol;
     private String name;
     private boolean transferrable;
 
-    public Item(String name, int positionRow, int positionCol, boolean isTransferrable) {
+    public Item(String name, boolean isTransferrable) {
         this.setName(name);
         this.setTransferrable(isTransferrable);
     }

@@ -1,15 +1,16 @@
 package za.co.muse.textadventure.component;
 
 import java.util.ArrayList;
-import java.util.List;
-import za.co.muse.textadventure.component.Item;
+import java.util.HashSet;
+
+import za.co.muse.textadventure.common.EnumDirection;
 
 public class Space {
     private int row_position = 0;
     private int col_position = 0;
     private String name;
     private ArrayList<Item> inventory = new ArrayList<>();
-
+    private HashSet<EnumDirection> exists = new HashSet<>();
 
 
 
@@ -47,24 +48,6 @@ public class Space {
     public void setName(String name) {
         this.name = name;
     }
-//
-//    public void addItem(Item aItem){
-//        //Check to see if the space is valid
-//            items.add(aItem);
-//
-//        }
-//list all availible items in the space
-//    //how to only display the items that is in the same space as player?
-//    public void listItems(){
-//
-//        for (int i=0;i<items.size();i++){
-//
-//            if (items.get(i).getPositionRow() == row_position && items.get(i).getPositionCol() == col_position){
-//                System.out.println(items.get(i).getName());
-//            }
-//
-//        }
-//    }
 
     /**
      * Adds given item to the Player's Inventory
@@ -116,5 +99,15 @@ public class Space {
      */
     public ArrayList<Item> getInventory(){
         return this.inventory;
+    }
+
+    public HashSet<EnumDirection> getPassages() { return this.exists; }
+
+    public void addExit(EnumDirection direction){
+        exists.add(direction);
+    }
+
+    public boolean canExit(EnumDirection direction){
+        return exists.contains(direction);
     }
 }

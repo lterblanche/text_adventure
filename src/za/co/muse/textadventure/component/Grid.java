@@ -109,29 +109,19 @@ public class Grid {
                 break;
         }
 
-        // Step through blocks.  If one exists in new position, returns true
+        // Can we exit form the current space in this direction?
+        Space thisSpace = getSpace(currentRow, currentCol);
+        if (!thisSpace.canExit(direction)){
+            return false;
+        }
 
+        // Step through blocks.  If one exists in new position, returns true
         for (Space block : getBlocks()) {
             if (block.getCol_position() == newCol && block.getRow_position() == newRow) {
                 return true;
             }
         }
-        if (currentRow == 1 && currentCol == 2){
-            if (newRow != 1){
-                return false;
-            }
-        }
-        if (currentRow == 1 && currentCol == 4){
-            if (newRow != 1){
-                return false;
-            }
-        }
 
-        if (currentRow == 2 && currentCol ==2){
-            if (newRow != 2){
-                return false;
-            }
-        }
 
         return false;
     }

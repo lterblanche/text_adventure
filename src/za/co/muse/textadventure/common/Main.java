@@ -5,6 +5,8 @@ import za.co.muse.textadventure.component.Item;
 import za.co.muse.textadventure.component.Player;
 import za.co.muse.textadventure.component.Space;
 
+import javax.management.monitor.GaugeMonitor;
+
 
 public class Main {
 
@@ -20,35 +22,56 @@ public class Main {
         //-----------------------------------------
         // BEDROOM 1
         //-----------------------------------------
-        Space bedroomOne = new Space(1, 2, "Bedroom");
+        Space s1 = new Space(1, 2, "Bedroom");
         // Add Items to Bedroom
-        bedroomOne.addItemToInventory(new Item("Book", 1, 2, true));
-        bedroomOne.addItemToInventory(new Item("Chair", 1, 2, false));
-        bedroomOne.addItemToInventory(new Item("Bed", 1, 2, false));
+        s1.addItemToInventory(new Item("Book", true));
+        s1.addItemToInventory(new Item("Chair", false));
+        s1.addItemToInventory(new Item("Bed", false));
+        // Add exits
+        s1.addExit(EnumDirection.EAST);
 
         //-----------------------------------------
         // HALLWAY (no items)
         //-----------------------------------------
-        Space hallwayOne = new Space(1, 3, "Hallway:");
+        Space s2 = new Space(1, 3, "Hallway:");
+        s2.addExit(EnumDirection.EAST);
+        s2.addExit(EnumDirection.SOUTH);
+        s2.addExit(EnumDirection.WEST);
 
 
         //-----------------------------------------
         // BEDROOM 2
         //-----------------------------------------
-        Space bedroomTwo = new Space(1, 4, "Bedroom2");
+        Space s3 = new Space(1, 4, "Bedroom2");
         // Add Items to Bedroom
-        bedroomTwo.addItemToInventory(new Item("Chair", 1, 4, false));
-        bedroomTwo.addItemToInventory(new Item("Bed", 1, 4, false));
-        bedroomTwo.addItemToInventory(new Item("fireplace", 1, 4, false));
-        bedroomTwo.addItemToInventory(new Item("Closet", 1, 4, false));
+        s3.addItemToInventory(new Item("Chair", false));
+        s3.addItemToInventory(new Item("Bed", false));
+        s3.addItemToInventory(new Item("fireplace", false));
+        s3.addItemToInventory(new Item("Closet", false));
+        s3.addExit(EnumDirection.EAST);
 
         // .. do the rest here
-        Space Hallway2One = new Space(2,2,"HaalWay");
+        Space s4 = new Space(2,2,"HaalWay");
         //add items
-        Hallway2One.addItemToInventory(new Item("Painting",2,2,false));
+        s4.addItemToInventory(new Item("Painting",false));
 
-        Space Hallway2Two = new Space(2,2,"Hallway");
-        Space Hallway2Tree = new Space(2,4,"Hallway");
+        Space s5 = new Space(2,3,"Hallway");
+        Space s6 = new Space(2,4,"Hallway");
+
+        Space s7 = new Space(3,2,"Storeroom");
+        s7.addItemToInventory(new Item ("Ladder",true));
+        s7.addItemToInventory(new Item ("Table",false));
+        s7.addItemToInventory(new Item ("Chair",false));
+        s7.addItemToInventory(new Item ("Lamp",false));
+
+        Space s8 = new Space(3,3,"Hallway");
+
+        Space s9 = new Space(3,4,"Study");
+
+        s9.addItemToInventory(new Item("CHair",false));
+        s9.addItemToInventory(new Item("Table",false));
+        s9.addItemToInventory(new Item("Lockbox",false));
+        s9.addItemToInventory(new Item("Letter",true));
 
 
 //
@@ -84,14 +107,17 @@ public class Main {
         player.setCurrentPos(1, 2);
 
         // Add the rooms/hallways to the game controller
-        gameController.getGrid().addSpace(bedroomOne);
-        gameController.getGrid().addSpace(bedroomTwo);
-        gameController.getGrid().addSpace(hallwayOne);
+        gameController.getGrid().addSpace(s1);
+        gameController.getGrid().addSpace(s2);
+        gameController.getGrid().addSpace(s3);
 
-        gameController.getGrid().addSpace(Hallway2One);
-        gameController.getGrid().addSpace(Hallway2Two);
-        gameController.getGrid().addSpace(Hallway2Tree);
+        gameController.getGrid().addSpace(s4);
+        gameController.getGrid().addSpace(s5);
+        gameController.getGrid().addSpace(s6);
 
+        gameController.getGrid().addSpace(s7);
+        gameController.getGrid().addSpace(s8);
+        gameController.getGrid().addSpace(s9);
         // .. do the rest here
 
         while (!gameController.doAbortGame()) {
