@@ -50,5 +50,38 @@ public class Item {
         this.interactionStatus = interactionStatus;
     }
 
+    void Interact(EnumInteraction Interact){
+    switch (Interact){
 
+        //if the item can be opened
+        case OPEN:
+            interactionStatus = EnumInteractionStatus.OPENED;
+            break;
+
+        case CLOSE:
+            interactionStatus = EnumInteractionStatus.CLOSED;
+            break;
+
+        case TURN:
+            interactionStatus = EnumInteractionStatus.TURNED;
+            break;
+
+        case READ:
+            interactionStatus = EnumInteractionStatus.READ;
+            break;
+
+        case CLIMB_UP:
+            interactionStatus = EnumInteractionStatus.CLIMBED_UP;
+            break;
+
+        case CLIMB_DOWN:
+            interactionStatus = EnumInteractionStatus.CLIMBED_DOWN;
+            break;
+
+
+
+
+    }
+
+    }
 }

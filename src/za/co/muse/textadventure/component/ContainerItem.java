@@ -13,8 +13,16 @@ public class ContainerItem {
     public void removeItem(Item item) {
         CItem.remove(item);
     }
-//list all the Items in the ContainerItem
+    //check to see if the Item is in the container
     public void getItem(Item item) {
+        for (int i=0;i< CItem.size();i++){
+            if (CItem.get(i).getName() == item.getName()){
+                System.out.println(CItem.get(i).getName());
+            }
+        }
+    }
+//list all the Items in the ContainerItem
+    public void getItems(Item item) {
         for (int i=0;i<CItem.size();i++){
             System.out.println(CItem.get(i).getName());
         }
