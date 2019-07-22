@@ -209,17 +209,18 @@ public class GameController {
             String itemName = item.getName().trim();
             if (itemToDrop.trim().compareToIgnoreCase(itemName) == 0) {
                 //Remove Item from player inventory
-                    getPlayer().removeItemFromInventory(item);
+                getPlayer().removeItemFromInventory(item);
+                System.out.println("Removing " + item.getName() + " from player inventory.");
                 //Place item in room
-                    getSpaceWherePlayerIs().addItemToInventory(item);
-                    //Done we're happy
-                    return true;
-                }
+                Space space = getSpaceWherePlayerIs();
+                space.addItemToInventory(item);
+                System.out.println("Dropping " + item.getName() + " in " + space.getName());
+                //Done we're happy
+                return true;
             }
-        return true;
         }
-
-
+        return true;
+    }
 
 
 }
