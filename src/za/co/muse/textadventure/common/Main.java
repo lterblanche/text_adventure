@@ -1,9 +1,6 @@
 package za.co.muse.textadventure.common;
 
-import za.co.muse.textadventure.component.GameController;
-import za.co.muse.textadventure.component.Item;
-import za.co.muse.textadventure.component.Player;
-import za.co.muse.textadventure.component.Space;
+import za.co.muse.textadventure.component.*;
 
 import javax.management.monitor.GaugeMonitor;
 
@@ -24,7 +21,11 @@ public class Main {
         //-----------------------------------------
         Space s1 = new Space(1, 2, "Bedroom");
         // Add Items to Bedroom
-        s1.addItemToInventory(new Item("Book", true));
+        ContainerItem bookshelf = new ContainerItem("Bookshelf", false);
+        bookshelf.addItem(new Item("Book",true));
+        s1.addItemToInventory(bookshelf);
+
+
         s1.addItemToInventory(new Item("Chair", false));
         s1.addItemToInventory(new Item("Bed", false));
         // Add exits
@@ -47,7 +48,10 @@ public class Main {
         s3.addItemToInventory(new Item("Chair", false));
         s3.addItemToInventory(new Item("Bed", false));
         s3.addItemToInventory(new Item("fireplace", false));
-        s3.addItemToInventory(new Item("Closet", false));
+
+        ContainerItem closet = new ContainerItem("Closet",false);
+        closet.addItem(new Item("can",true));
+        s3.addItemToInventory(closet);
         s3.addExit(EnumDirection.EAST);
 
         // .. do the rest here
@@ -70,8 +74,10 @@ public class Main {
 
         s9.addItemToInventory(new Item("CHair",false));
         s9.addItemToInventory(new Item("Table",false));
-        s9.addItemToInventory(new Item("Lockbox",false));
-        s9.addItemToInventory(new Item("Letter",true));
+
+        ContainerItem lockbox = new ContainerItem("Lockbox",false);
+        lockbox.addItem(new Item("Letter",true));
+        s9.addItemToInventory(lockbox);
 
 
 //

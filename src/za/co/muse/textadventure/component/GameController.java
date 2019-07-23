@@ -92,7 +92,7 @@ public class GameController {
     }
 
     public void getUserInput() {
-        System.out.println("What do you want to do? (use `move ...`, `look`, `Inventory`, `Pickup` or `end`:");
+        System.out.println("What do you want to do? (use `move ...`, `look`, `inventory`, `pickup`, `drop` or `end`:");
         String userInput = getInputScanner().nextLine();
         // MOVE
         if (userInput.toLowerCase().contains("move ")) {

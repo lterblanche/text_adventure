@@ -1,32 +1,39 @@
 package za.co.muse.textadventure.component;
 
 import java.util.ArrayList;
-import za.co.muse.textadventure.component.Item;
 
-public class ContainerItem {
-    private ArrayList<Item> CItem = new ArrayList<>();
-    //place a Item into the Container
-    public void addItem(Item item) {
-        CItem.add(item);
+public class ContainerItem extends Item {
+    private ArrayList<Item> CItems = new ArrayList<>();
+
+    public ContainerItem(String name, boolean isTransferrable) {
+        super(name, isTransferrable);
+
     }
-    //remove a Item from the container
-    public void removeItem(Item item) {
-        CItem.remove(item);
+
+
+    //place a Item inside the container
+    public void addItem(Item item){
+            CItems.add(item);
+
     }
-    //check to see if the Item is in the container
-    public void getItem(Item item) {
-        for (int i=0;i< CItem.size();i++){
-            if (CItem.get(i).getName() == item.getName()){
-                System.out.println(CItem.get(i).getName());
-            }
+    //remove a item from the container
+    public void removeItem(Item item,boolean isTransferrable){
+        if (isTransferrable == true){
+            CItems.remove(item);
         }
     }
-//list all the Items in the ContainerItem
-    public void getItems(Item item) {
-        for (int i=0;i<CItem.size();i++){
-            System.out.println(CItem.get(i).getName());
+    //what is the item name
+    public void Itemname(Item item){
+
+    }
+    //list all items inside the container
+    public void listItems(ArrayList<Item> itemList){
+        for (int i=0;i < itemList.size();i++){
+            System.out.println(itemList.get(i).getName());
         }
     }
+
+
 
 
 }
