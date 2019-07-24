@@ -1,6 +1,7 @@
 package za.co.muse.textadventure.component;
 
 import za.co.muse.textadventure.common.EnumDirection;
+import za.co.muse.textadventure.common.EnumInteraction;
 
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class GameController {
     private Scanner inputScanner;
     private Grid grid;
     private Player player;
+    private Item item;
     private boolean abortGame = false;
 
 
@@ -69,11 +71,45 @@ public class GameController {
                 break;
         }
     }
+    private void EnumInteraction(String text) {
+        String trimmedText = text.toLowerCase().trim();
+
+        switch (trimmedText) {
+            case "open":
+                getItem().get(EnumInteraction.OPEN);
+                break;
+
+            case "close":
+                getPlayer().move(EnumInteraction.CLOSE);
+                break;
+
+            case "read":
+                getPlayer().move(EnumInteraction.READ);
+                break;
+
+            case "turn":
+                getPlayer().move(EnumInteraction.TURN);
+                break;
+        }
+    }
+    //Interact with a Item e.g. Open/Close/Read
+    private void interact(String text){
+        String trimmedText = text.toLowerCase().trim();
+
+        switch (trimmedText) {
+            case "open":
+
+        }
+
+
+    }
 
 
     public Grid getGrid() {
         return grid;
     }
+
+
 
     public void setGrid(Grid grid) {
         this.grid = grid;

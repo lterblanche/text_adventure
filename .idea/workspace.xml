@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e275c42-a338-4537-8c76-0a64b7334858" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/game_design.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/UML/game_design.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/ContainerItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/ContainerItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/ContainerItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/ContainerItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/common/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/common/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/text_adventure/za/co/muse/textadventure/component/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java" afterDir="false" />
     </list>
@@ -23,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+            <state relative-caret-position="162">
+              <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
+            <state relative-caret-position="1245">
               <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -73,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-303">
-              <caret line="94" column="106" selection-start-line="94" selection-start-column="106" selection-end-line="94" selection-end-column="106" />
+            <state relative-caret-position="124">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
                 <element signature="e#956#957#0" expanded="true" />
                 <element signature="e#983#984#0" expanded="true" />
@@ -109,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            <state relative-caret-position="328">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteraction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+              <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -139,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteractionStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -148,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state>
+              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1463#1464#0" expanded="true" />
@@ -223,10 +220,10 @@
         <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Grid.java" />
         <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteraction.java" />
         <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteractionStatus.java" />
-        <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java" />
         <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/ContainerItem.java" />
-        <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" />
         <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java" />
+        <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java" />
+        <option value="$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java" />
       </list>
     </option>
   </component>
@@ -427,7 +424,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.4181818" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.4181818" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39868203" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -437,7 +434,7 @@
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Ant Build" order="3" visible="true" weight="0.0976" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.0976" />
       <window_info anchor="right" id="Maven" order="4" weight="0.0248" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -449,16 +446,17 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4892562" visible="true" weight="0.2648" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4892562" visible="true" weight="0.2176" />
       <window_info id="Structure" order="6" sideWeight="0.5107438" side_tool="true" weight="0.2648" />
       <window_info id="DB Browser" order="7" />
+      <window_info id="simpleUML" order="8" weight="0.3384333" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3289256" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.4181818" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.4181818" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39868203" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -468,28 +466,16 @@
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.0248" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.0976" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.0248" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create A Class for items" />
     <option name="LAST_COMMIT_MESSAGE" value="create A Class for items" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java</url>
-          <line>176</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -522,9 +508,36 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumDirection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
+        <state relative-caret-position="1245">
           <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -546,48 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteractionStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/ContainerItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state>
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1463#1464#0" expanded="true" />
@@ -612,10 +587,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Space.java">
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteractionStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/ContainerItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/EnumInteraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="46" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -624,8 +620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/component/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="94" column="106" selection-start-line="94" selection-start-column="106" selection-end-line="94" selection-end-column="106" />
+        <state relative-caret-position="124">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="e#956#957#0" expanded="true" />
             <element signature="e#983#984#0" expanded="true" />
@@ -649,16 +645,6 @@
             <element signature="e#3844#3845#0" expanded="true" />
             <element signature="e#3895#3896#0" expanded="true" />
             <element signature="e#3937#3938#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/za/co/muse/textadventure/common/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -3,11 +3,15 @@ package za.co.muse.textadventure.component;
 import za.co.muse.textadventure.common.EnumInteraction;
 import za.co.muse.textadventure.common.EnumInteractionStatus;
 import za.co.muse.textadventure.component.Item;
-
+import za.co.muse.textadventure.component.ContainerItem;
 
 import java.util.ArrayList;
 
 public class Item {
+
+
+
+
         private String name;
         private boolean transferrable;
         //add the list odf possible actions that can be done with a Item
@@ -19,6 +23,28 @@ public class Item {
             this.setName(name);
             this.setTransferrable(isTransferrable);
         }
+
+    private void move(String text) {
+        String trimmedText = text.toLowerCase().trim();
+
+        switch (trimmedText) {
+            case "open":
+                getInteraction().get(EnumInteraction.OPEN);
+                break;
+
+            case "close":
+                getPlayer().move(EnumInteraction.CLOSE);
+                break;
+
+            case "read":
+                getPlayer().move(EnumInteraction.READ);
+                break;
+
+            case "turn":
+                getPlayer().move(EnumInteraction.TURN);
+                break;
+        }
+    }
 
         public String getName() {
             return name;
