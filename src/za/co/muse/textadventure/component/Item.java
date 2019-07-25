@@ -2,8 +2,7 @@ package za.co.muse.textadventure.component;
 
 import za.co.muse.textadventure.common.EnumInteraction;
 import za.co.muse.textadventure.common.EnumInteractionStatus;
-import za.co.muse.textadventure.component.Item;
-import za.co.muse.textadventure.component.ContainerItem;
+
 
 import java.util.ArrayList;
 
@@ -24,25 +23,34 @@ public class Item {
             this.setTransferrable(isTransferrable);
         }
 
-    private void move(String text) {
-        String trimmedText = text.toLowerCase().trim();
+    private void Interaction(EnumInteraction interaction) {
 
-        switch (trimmedText) {
-            case "open":
-                getInteraction().get(EnumInteraction.OPEN);
+
+        switch (interaction) {
+            case OPEN:
+                setInteractionStatus(EnumInteractionStatus.OPENED);
                 break;
 
-            case "close":
-                getPlayer().move(EnumInteraction.CLOSE);
+            case CLOSE:
+                setInteractionStatus(EnumInteractionStatus.CLOSED);
                 break;
 
-            case "read":
-                getPlayer().move(EnumInteraction.READ);
+            case TURN:
+                setInteractionStatus(EnumInteractionStatus.TURNED);
                 break;
 
-            case "turn":
-                getPlayer().move(EnumInteraction.TURN);
+            case READ:
+                setInteractionStatus(EnumInteractionStatus.READ);
                 break;
+
+            case CLIMB_UP:
+                setInteractionStatus(EnumInteractionStatus.CLIMBED_UP);
+                break;
+
+            case CLIMB_DOWN:
+                setInteractionStatus(EnumInteractionStatus.CLIMBED_DOWN);
+                break;
+
         }
     }
 

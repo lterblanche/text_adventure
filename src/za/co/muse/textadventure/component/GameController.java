@@ -2,6 +2,10 @@ package za.co.muse.textadventure.component;
 
 import za.co.muse.textadventure.common.EnumDirection;
 import za.co.muse.textadventure.common.EnumInteraction;
+import za.co.muse.textadventure.common.EnumInteraction;
+import za.co.muse.textadventure.common.EnumInteractionStatus;
+import za.co.muse.textadventure.component.Item;
+import za.co.muse.textadventure.component.ContainerItem;
 
 import java.util.Scanner;
 
@@ -71,45 +75,57 @@ public class GameController {
                 break;
         }
     }
-    private void EnumInteraction(String text) {
-        String trimmedText = text.toLowerCase().trim();
 
-        switch (trimmedText) {
-            case "open":
-                getItem().get(EnumInteraction.OPEN);
-                break;
 
-            case "close":
-                getPlayer().move(EnumInteraction.CLOSE);
-                break;
 
-            case "read":
-                getPlayer().move(EnumInteraction.READ);
-                break;
 
-            case "turn":
-                getPlayer().move(EnumInteraction.TURN);
-                break;
-        }
-    }
     //Interact with a Item e.g. Open/Close/Read
     private void interact(String text){
         String trimmedText = text.toLowerCase().trim();
 
         switch (trimmedText) {
             case "open":
+                getItem().Interact(EnumInteraction.OPEN);
+                break;
 
+            case "close":
+                getItem().Interact(EnumInteraction.CLOSE);
+                break;
+
+            case "turn":
+                getItem().Interact(EnumInteraction.TURN);
+                break;
+
+            case "read":
+                getItem().Interact(EnumInteraction.READ);
+                break;
+
+            case "climbed up":
+                getItem().Interact(EnumInteraction.CLIMB_UP);
+                break;
+
+            case "climbed down":
+                getItem().Interact(EnumInteraction.CLIMB_DOWN);
+                break;
         }
 
 
     }
 
 
+
+
     public Grid getGrid() {
         return grid;
     }
 
+    public Item getItem() {
+        return item;
+    }
 
+    public void setItem(Item item){
+        this.item = item;
+    }
 
     public void setGrid(Grid grid) {
         this.grid = grid;

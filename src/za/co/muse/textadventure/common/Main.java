@@ -79,6 +79,20 @@ public class Main {
         lockbox.addItem(new Item("Letter",true));
         s9.addItemToInventory(lockbox);
 
+        Space s10 = new Space(4,1,"Vault");
+        s10.addItemToInventory(new Item("Reward",true));
+        s10.addExit(EnumDirection.EAST);
+
+        Space s11 = new Space(4,2,"Corridor");
+        s11.addExit(EnumDirection.NORTH);
+        s11.addExit(EnumDirection.WEST);
+        s11.addExit(EnumDirection.EAST);
+
+        Space s12 = new Space(4,3,"Corridor");
+        ContainerItem painting = new ContainerItem("Painting",false);
+        painting.addItem(new Item("Key",true));
+        s12.addItemToInventory(painting);
+
 
 //
 //
