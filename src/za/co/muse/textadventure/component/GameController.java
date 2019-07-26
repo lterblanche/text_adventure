@@ -106,7 +106,6 @@ public class GameController {
 
             case "climbed down":
                 getItem().Interact(EnumInteraction.CLIMB_DOWN);
-                break;
         }
 
 
@@ -145,6 +144,7 @@ public class GameController {
 
     public void getUserInput() {
         System.out.println("What do you want to do? (use `move ...`, `look`, `inventory`, `pickup`, `drop` or `end`:");
+        System.out.println("`read`, `turn`, `climb up` or `climb down` ");
         String userInput = getInputScanner().nextLine();
         // MOVE
         if (userInput.toLowerCase().contains("move ")) {
